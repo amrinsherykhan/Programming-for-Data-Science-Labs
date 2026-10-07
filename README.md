@@ -1,2 +1,5 @@
-# Programming-for-Data-Science-Labs
-Programming for Data Science Lab assignments
+# Programming for Data Science Labs
+
+Student ID: 24-59701-3
+Name: Amrin Shery Khan
+
