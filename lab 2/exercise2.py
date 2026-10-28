@@ -76,29 +76,24 @@ while number >= 0:
     print(number)
     number -= 1
 #8
-products = [
-    {"name": "Notebook", "price": 120, "quantity": 3},
-    {"name": "Pen", "price": 20, "quantity": 5},
-    {"name": "USB Drive", "price": 850, "quantity": 2},
-    {"name": "Mouse", "price": 650, "quantity": 1}
+inventory_items = [
+    {"title": "Notebook", "cost": 120, "qty": 3},
+    {"title": "Pen", "cost": 20, "qty": 5},
+    {"title": "USB Drive", "cost": 850, "qty": 2},
+    {"title": "Mouse", "cost": 650, "qty": 1}
 ]
 
-total_inventory_value = 0
-highest_line_total = -1
-top_product = ""
+overall_value = 0
+peak_item = inventory_items[0]
 
-for p in products:
-    line_total = p["price"] * p["quantity"]
-    total_inventory_value += line_total
-    print(f"Product: {p['name']}, Line Total: {line_total}")
-    if line_total > highest_line_total:
-        highest_line_total = line_total
-        top_product = p["name"]
-
-print(f"\nTotal Inventory Value: {total_inventory_value}")
-print(f"Product with Highest Line Total: {top_product} ({highest_line_total})")
-
+for item in inventory_items:
+    item_total = item["cost"] * item["qty"]
+    print(item["title"], "Line Total:", item_total)
     
+    overall_value = overall_value + item_total
+    
+    if item_total > (peak_item["cost"] * peak_item["qty"]):
+        peak_item = item
 
-
- 
+print("Total Inventory Value:", overall_value)
+print("Highest Value Product:", peak_item["title"])
