@@ -75,7 +75,28 @@ while number < 0:
 while number >= 0:
     print(number)
     number -= 1
+#8
+products = [
+    {"name": "Notebook", "price": 120, "quantity": 3},
+    {"name": "Pen", "price": 20, "quantity": 5},
+    {"name": "USB Drive", "price": 850, "quantity": 2},
+    {"name": "Mouse", "price": 650, "quantity": 1}
+]
 
+total_inventory_value = 0
+highest_line_total = -1
+top_product = ""
+
+for p in products:
+    line_total = p["price"] * p["quantity"]
+    total_inventory_value += line_total
+    print(f"Product: {p['name']}, Line Total: {line_total}")
+    if line_total > highest_line_total:
+        highest_line_total = line_total
+        top_product = p["name"]
+
+print(f"\nTotal Inventory Value: {total_inventory_value}")
+print(f"Product with Highest Line Total: {top_product} ({highest_line_total})")
 
     
 

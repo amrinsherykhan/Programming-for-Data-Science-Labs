@@ -45,3 +45,23 @@ print("Number of characters:", len(text))
 print("Number of vowels:", vowels)
 print("Number of spaces:", spaces)
 
+#4
+def calculate_grade(marks):
+    if not marks:
+        return "F"
+    avg = sum(marks) / len(marks)
+    if avg >= 80:
+        return "A"
+    elif avg >= 70:
+        return "B"
+    elif avg >= 60:
+        return "C"
+    elif avg >= 50:
+        return "D"
+    else:
+        return "F"
+
+student_marks = [78, 85, 90, 65, 88]
+grade = calculate_grade(student_marks)
+print(f"Average Marks: {sum(student_marks)/len(student_marks):.2f}")
+print(f"Assigned Grade: {grade}")
